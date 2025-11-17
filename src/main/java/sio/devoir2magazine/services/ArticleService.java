@@ -16,8 +16,7 @@ public class ArticleService
         this.articleRepository = articleRepository;
     }
 
-    public List<ArticlePigiste> getAllArticlePigistes(int idPigiste)
-    {
-        return articleRepository.findArticlesByNumPigs(idPigiste);
+    public List<ArticlePigiste> getAllArticlePigistes(int numPig) {
+        return articleRepository.findArticlesByNumPigs(numPig);
     }
 }

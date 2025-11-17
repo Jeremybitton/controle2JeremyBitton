@@ -13,8 +13,8 @@ import java.util.List;
 public interface ArticleRepository extends JpaRepository<Article, Integer>
 {
 
-    @Query("select new sio.devoir2magazine.dto.ArticlePigiste(a.id,a.titreArticle,a.nbFeuillets,p.nomPigiste) from Article a join a.numPig p where a.numPig.id =: idPigiste")
-    List<ArticlePigiste> findArticlesByNumPigs(@Param("idPigiste") int idPigiste);
+    @Query("select new sio.devoir2magazine.dto.ArticlePigiste(a.id,a.titreArticle,a.nbFeuillets,p.nomPigiste) from Article a join a.numPig p where a.numPig.id =:numPig")
+    List<ArticlePigiste> findArticlesByNumPigs(@Param("numPig") int numPig);
 
 
 }
